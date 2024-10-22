@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Jevisco</title>
+   <!-- CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="./css/fonts.css">
+      <link rel="stylesheet" href="./css/main.css">
+   <!-- JS -->
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.0/dist/jquery-ui.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+      <script defer src="./js/main.js" defer></script>
+
+</head>
+<body>
+   <header>
+      <div class="inner">
+         <div class="headerNav">
+            <h1>
+               <a href="index.html">
+               <span class="screenOut">Jevisco</span>
+               </a>
+            </h1>
+            <nav id="gnb">
+               <ul class="listBox">
+                  <li>
+                     <a href="#">건축용</a>
+                     <div class="dep2Wrap">
+                        <ul class="dep2">
+                           <li>건축용 HOME</li>
+                           <li>제품소개</li>
+                           <li>공간별추천</li>
+                           <li>컬러정보</li>
+                           <li>DIY용 페인팅가이드</li>
+                           <li>전문가용 페인팅가이드</li>
+                           <li>도장컨설팅시스템</li>
+                           <li>자동조색시스템</li>
+                           <li>대리점안내</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <a href="#">공업용</a>
+                        <div class="dep2Wrap">
+                           <ul class="dep2">
+                              <li>공업용 HOME</li>
+                              <li>철/비철 금속</li>
+                              <li>플라스틱</li>
+                              <li>분체</li>
+                              <li>목공</li>
+                              <li>제관</li>
+                              <li>PCM</li>
+                              <li>특수코팅</li>
+                           </ul>
+                        </div>
+                  </li>
+                  <li>
+                     <a href="#">선박&middot;중방식용</a>
+                        <div class="dep2Wrap">
+                           <ul class="dep2">
+                              <li>선박&middot;중방식용 HOME</li>
+                              <li>제품소개</li>
+                              <li>KSC컬러북</li>
+                              <li>산업별솔루션</li>
+                              <li>시공사례</li>
+                           </ul>
+                        </div>
+                  </li>
+                  <li>
+                     <a href="#">자동차보수용</a>
+                        <div class="dep2Wrap">
+                           <ul class="dep2">
+                              <li>동차보수용 HOME</li>
+                              <li>제품소개</li>
+                              <li>시스템도장</li>
+                              <li>도장기술</li>
+                              <li>컬러정보</li>
+                              <li>이달의 컬러</li>
+                              <li>교육센터</li>
+                              <li>대리점안내</li>
+                           </ul>
+                        </div>
+                  </li>
+                  <li>
+                     <a href="#">기업정보</a>
+                        <div class="dep2Wrap">
+                           <ul class="dep2">
+                              <li>회사소개</li>
+                              <li>강남그룹소개</li>
+                              <li>미디어센터</li>
+                              <li>투자정보</li>
+                              <li>인재채용</li>
+                              <li>고객지원</li>
+                           </ul>
+                        </div>
+                  </li>
+               </ul>
+            </nav>
+
+            <div class="util">
+               <div class="langWrap">
+                  <button>KOR <i class="ri-arrow-drop-down-fill"></i></button>
+                     <ul>
+                        <li><a href="#">ENG</a></li>
+                        <li><a href="#">中國語</a></li>
+                     </ul>
+                  </div>
+
+               <div class="location">
+                  <button>
+                     <a href="#"><i class="ri-map-pin-line"></i></a>
+                  </button>
+               </div>
+
+               <div class="service">
+                  <button>
+                     <a href="#"><i class="ri-customer-service-2-fill"></i></a>
+                  </button>
+               </div>
+            </div>
+
+            <button type="button" class="hamburger_open">
+               <i class="ri-menu-line"></i>
+            </button>
+         </div>
+
+         <div class="hamburger">
+            <button type="button" class="hamburger_close"><i class="ri-close-line"></i></button>
+            <div class="burgerMenu">
+               <ul class="burgerDep2">
+                  <li class="bugerList">
+                     <a href="#">건축용</a>
+                        <ul class="burgerItem">
+                           <li>건축용 HOME</li>
+                           <li>제품소개</li>
+                           <li>공간별추천</li>
+                           <li>컬러정보</li>
+                           <li>DIY용 페인팅가이드</li>
+                           <li>전문가용 페인팅가이드</li>
+                           <li>도장컨설팅시스템</li>
+                           <li>자동조색시스템</li>
+                           <li>대리점안내</li>
+                        </ul>
+                  </li>
+                  <li class="bugerList">
+                     <a href="#">공업용</a>
+                           <ul class="burgerItem">
+                              <li>공업용 HOME</li>
+                              <li>철/비철 금속</li>
+                              <li>플라스틱</li>
+                              <li>분체</li>
+                              <li>목공</li>
+                              <li>제관</li>
+                              <li>PCM</li>
+                              <li>특수코팅</li>
+                           </ul>
+                  </li>
+                  <li class="bugerList">
+                     <a href="#">선박&middot;중방식용</a>
+                        <!-- <div class="burgerItem"> -->
+                           <ul class="burgerItem">
+                              <li>선박&middot;중방식용 HOME</li>
+                              <li>제품소개</li>
+                              <li>KSC컬러북</li>
+                              <li>산업별솔루션</li>
+                              <li>시공사례</li>
+                           </ul>
+                        <!-- </div> -->
+                  </li>
+                  <li class="bugerList">
+                     <a href="#">자동차보수용</a>
+                           <ul class="burgerItem">
+                              <li>동차보수용 HOME</li>
+                              <li>제품소개</li>
+                              <li>시스템도장</li>
+                              <li>도장기술</li>
+                              <li>컬러정보</li>
+                              <li>이달의 컬러</li>
+                              <li>교육센터</li>
+                              <li>대리점안내</li>
+                           </ul>
+                  </li>
+                  <li class="bugerList">
+                     <a href="#">기업정보</a>
+                           <ul  class="burgerItem">
+                              <li>회사소개</li>
+                              <li>강남그룹소개</li>
+                              <li>미디어센터</li>
+                              <li>투자정보</li>
+                              <li>인재채용</li>
+                              <li>고객지원</li>
+                           </ul>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+      </div>
+   </header>
+
+   <main id="mainWrap">
+      <div class="mainVisual">
+         <div class="swiper mainVideo">
+
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <video src="./img/video/Connect Color.mp4" muted autoplay playsinline loop ></video>
+               </div>
+               <div class="swiper-slide">
+                  <video src="./img/video/jevisco2023(full).MOV" muted autoplay playsinline loop ></video>
+               </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="autoplay-progress">
+               <svg viewBox="0 0 50 50">
+                  <circle cx="25" cy="25" r="20"></circle>
+               </svg>
+               <span></span>
+            </div>
+
+         </div>
+      </div>
+   </main>
+
+
+   <!-- <section id="search">
+      <div class="searchWrap">
+         <div class="whatBox">
+            <div class="txtBox">
+               <strong>무엇을 찾으시나요?</strong>
+               <p>빠르게 변화하는 트렌드를 분석 후 고객에게 <span>최상의 솔루션</span>을 제공합니다.</p>
+            </div>
+            <div class="searchbox">
+               <input type="text" placeholder="궁금하신 제품, 컬러, 대점 검색을 하세요" class="field">
+               <i class="ri-search-line"></i>
+               </div>
+         </div>
+      </div>
+   </section> -->
+
+   <section id="field">
+      <div class="inner">
+         <div class="fieldBox">
+            <div class="allName">
+               <h2>Fieled of Business</h2>
+                  <div class="nameSub">
+                     <strong><a href="#">건축용 도료</a><i class="ri-arrow-right-up-line"></i></strong>
+                     <p>다양한 건축물의 내, 외부에 사용하는 도료로 공간별 제품 정보를 알려드립니다.</p>
+                  </div>
+
+                  <div class="nameSub nameSub2">
+                     <strong><a href="#">공업용 도료</a><i class="ri-arrow-right-up-line"></i></strong>
+                     <p>Industrial Coating 기술력으로 산업용 중장비에서 자동차부품, 가전제품, 가구, 음료캔에 이르기까지<br>다양한 분야에서 최적화된 도료 솔루션을 제공합니다.</p>
+                  </div>
+
+                  <div class="nameSub nameSub2">
+                     <strong><a href="#">선박&middot;증방식용 도료</a><i class="ri-arrow-right-up-line"></i></strong>
+                     <p>Protective Coating 솔루션으로 가혹한 외부환경에서도 <br>선박, 교량, 발전소, 송전탑 및 각종 플랜트 등을 안전하게 보호합니다.</p>
+                  </div>
+
+                  <div class="nameSub nameSub2">
+                     <strong><a href="#">자동차용 도료</a><i class="ri-arrow-right-up-line"></i></strong>
+                     <p>자동차 외형을 복구하고 작은  차량 손상이나 부식으로 막고, 보호하는 제품 정보를 알려드립니다.</p>
+               </div>
+
+            </div>
+            <div class="field_content">
+               <ul class="buttonLi">
+                  <li><button>건축용 도료</button></li>
+                  <li><button>공업용 도료</button></li>
+                  <li><button>선박&middot;증방식용 도료</button></li>
+                  <li><button>자동차용 도료</button></li>
+               </ul>
+
+               <div class="swiper fieldSwiper">
+                  <div class="swiper-wrapper fieldWrapper">
+                     <div class="swiper-slide">
+                        <img src="./img/main/건축용/colortrend1.png">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/건축용/colortrend2.png">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/건축용/colortrend3.png">
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+
+               <div class="swiper swiper2 fieldSwiper ">
+                  <div class="swiper-wrapper fieldWrapper">
+                     <div class="swiper-slide">
+                        <img src="./img/main/공업용/powder_coating03.jpg">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/공업용/powder_coating04.jpg">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/공업용/wood02.jpg">
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+               <div class="swiper  swiper2 fieldSwiper">
+                  <div class="swiper-wrapper fieldWrapper">
+                     <div class="swiper-slide">
+                        <img src="./img/main/선박용/img_ship_case01.jpg">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/선박용/img_ship_case02.jpg">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/선박용/img_ship_case03.jpg">
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+               <div class="swiper swiper2 fieldSwiper">
+                  <div class="swiper-wrapper fieldWrapper">
+                     <div class="swiper-slide">
+                        <img src="./img/main/자동차보수용/car/car_1.jpg">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/자동차보수용/car/car_2.png">
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/main/자동차보수용/car/car_3.jpg">
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="color">
+      <div class="inner">
+         <div class="colorBox">
+            <div class="allName">
+               <h2>Color Collection</h2>
+               <div class="nameSub">
+                  <p>건축, 가전, 목공, 자동차, 선박  등 전 산업 분야의 컬러를 소개합니다</p>
+               </div>
+            </div>
+
+               <img src="./img/cimg/paint.png" alt="" >
+         </div>
+
+         <div class="colorPop">
+
+               <div class="popText">
+                  <p>원하는 <strong>컬러</strong>를  한눈에 확인하고, 다양한  조건을 쉽게 찾아보세요</p>
+                  <button class="viewMore2"><a href="#">View More</a></button>
+               </div>
+
+               <div class="popImg">
+                  <img class="outburst" src="./img/cimg/paintpop.png" alt="">
+               </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="business">
+      <div class="inner">
+         <div class="companyLeft">
+            <div class="allName2_sub allName2">
+               <div class="allNameIn">
+                  <h2>Business</h2>
+                  <p>지속가능하고 혁신적인 도료산업의 리더</p>
+                  <span>건축, 가전, 목공, 자동차, 선박 등 전 산업 분야에 걸쳐 앞서가는<br>  기술과 품질 그리고 보다 친환경적인 도료 솔루션을 제공합니다.</span>
+                  <button class="viewMore"><a href="#">JEVISCO 자세히 알아보기 > </a></button>
+               </div>
+            </div>
+
+            <div class="allName2_sub">
+               <div class="allNameIn2">
+                  <h3>HISTROY</h3>
+                  <p>The Origin of JEVISCO</p>
+                  <img src="./img/main/역사관/history_01_04.jpg" alt="">
+                  <span> JEVISCO의 진취적인 기상과 미래를 향해 나아가는 <br>역동적인 기업문화를 상징적으로 표현해 주고 있습니다.</span>
+                  <button class="viewMore"><a href="#">View More</a></button>
+               </div>
+               </div>
+
+            <div class="allName2_sub">
+               <div class="allNameIn2">
+                  <h3>ESG</h3>
+                  <p>Environmental • Social • Governance</p>
+                  <img src="./img/cimg/esg1.jpg" alt="제비스코역사">
+                  <span> 친환경 경영, 사회적 책임과 지배구조 개선 등 <br>
+                     ESG 경영활동을 적극적으로 추진하고 있습니다.
+                     </span>
+                     <button class="viewMore"><a href="#">View More</a></button>
+               </div>
+            </div>
+
+            <div class="allName2_sub">
+               <div class="allNameIn2">
+                  <h3>Place of Business</h3>
+                  <p>Internal and External</p>
+                  <img src="./img/cimg/world1.jpg" alt="제비스코역사">
+                  <span> 해외시장 개척에 총력을 집중하여 <br> 각 분야별 글로벌 기업으로 면모를 갖추어 나가고 있습니다.</span>
+                  <button class="viewMore"><a href="#">View More</a></button>
+               </div>
+            </div>
+         </div>
+
+         <div class="swiper companyRight">
+            <div class="swiper-wrapper companyWrapper">
+               <div class="swiper-slide companySlide"><img src="./img/cimg/business2.jpg" alt=""></div>
+               <div class="swiper-slide companySlide"><img src="./img/cimg/histroy2.jpg" alt=""></div>
+               <div class="swiper-slide companySlide"><img src="./img/cimg/esg2.jpg" alt=""></div>
+               <div class="swiper-slide companySlide"><img src="./img/cimg/world2.jpg" alt=""></div>
+            </div>
+         </div>
+         <div class="scroll"></div>
+      </div>
+   </section>
+
+   <section id="news">
+      <div class="inner">
+         <div class="allName">
+            <h2>News</h2>
+            <div class="nameSub">
+               <p>Jevisco의 새로운 소식을 전달합니다.</p>
+            </div>
+         </div>
+
+         <div class="newsBox">
+            <div class="newTab">
+               <ul>
+                  <li>회사뉴스</li>
+                  <li>제품뉴스</li>
+                  <li>보도자료</li>
+               </ul>
+               <button class="viewMore"><a href="#">View More</a></button>
+            </div>
+
+            <div class="newList">
+               <ul class="article">
+                  <li><a href="#">
+                     <span class="listName">2024 제비스코 DAY 캠페인 시행</span>
+                     <span class="date">2024-07-07</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">2023 제비스코 DAY 캠페인 시행</span>
+                     <span class="date">2023-07-07</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">2022 제비스코 DAY 캠페인 시행</span>
+                     <span class="date">2022-07-07</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">2021 제비스코 DAY 캠페인 시행</span>
+                     <span class="date">2021-07-07</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">제비스코 X 이마트24 콜라보레이션</span>
+                     <span class="date">2021-04-02</span>
+                  </a></li>
+               </ul>
+
+               <ul class="article">
+                  <li><a href="#">
+                     <span class="listName">환경 수성 드라이비트용 상도 도료 개발</span>
+                     <span class="date">2016-04-01</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">DMF Free Type 스킨 수지 개발</span>
+                     <span class="date">2015-10-14</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">비스페놀F형(BPF) 에폭시 Type 강관용 분체도료 개발</span>
+                     <span class="date">2015-09-22</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">EGI(아연도금강판) 소재에 부착이 우수한 자동차 보수용 퍼티</span>
+                     <span class="date">2015-04-23</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">쌍용자동차 전차종의 컬러시편 기증</span>
+                     <span class="date">2015-04-03</span>
+                  </a></li>
+               </ul>
+
+               <ul class="article">
+                  <li><a href="#">
+                     <span class="listName">강남제비스코㈜, 고양시립 아람미술관 전시회 도료 후원</span>
+                     <span class="date">2024-07-25</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">강남제비스코㈜, 방수 보수 페인트 '방수크림’ 출시</span>
+                     <span class="date">2023-06-17</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">케냐 콘자신도시개발청 관계자, 강남제비스코㈜ 방문</span>
+                     <span class="date">2024-06-10</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">강남제비스코㈜, 환경의 날 맞이 사내·외 캠페인 진행</span>
+                     <span class="date">2024-06-05</span>
+                  </a></li>
+                  <li><a href="#">
+                     <span class="listName">강남제비스코㈜, 넷폼알앤디와 건축물 유지보수 기술개발에 관한 MOU 체결</span>
+                     <span class="date">2024-04-17</span>
+                  </a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="customer">
+      <div class="customerBox">
+         <div class="boxTitle">
+            <strong>Contact us</strong>
+            <p>JEVISCO에 대한 정보를 제공해드립니다.</p>
+         </div>
+
+         <div class="textBox">
+            <div class="boxtext service">
+               <a href="#">
+                  <p class="textName">고객지원 <i class="ri-arrow-right-up-line"></i></p>
+                  <p class="textSub">1:1 문의</p>
+                  <span>문의 내용을 작성 해주시 확인 후, <br>  신속하게  고객님의 메일로  회신하도록 하겠습니다.</span>
+               </a>
+            </div>
+
+            <div class="boxtext store">
+               <a href="#">
+                  <p class="textName">대리점 위치 <i class="ri-arrow-right-up-line"></i></p>
+                  <p class="textSub">페인트 전문점</p>
+                  <span>자동조색, 자동차보수용, 가정용페인트, 일요일 운영 점문점 등 국내· 외 사업장의 정보를 알려 드리겠습니다.</span>
+               </a>
+            </div>
+
+         </div>
+
+         <div class="flow_content_wrap">
+            <div class="flow_content">
+               <p>KANGNAM JEVISCO</p>
+               <p>KANGNAM JEVISCO</p>
+               <p>KANGNAM JEVISCO</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="blankBox"></div>
+
+   </section>
+
+   <footer>
+      <div class="inner">
+         <div class="footerBox">
+            <div class="footerLeft">
+               <div class="topLeft">
+                  <div class="logo">
+                     <a href="index.html"><img src="./img/common/h1_logo.png" alt="제비스코"></a>
+                  </div>
+
+                  <div class="infroInk">
+                     <a href="#">개인정보취급방침 &#124; </a>
+                     <a href="#">이용약관 &#124; </a>
+                     <a href="#">사이트 맵</a>
+                  </div>
+               </div>
+
+               <div class="footerMi">
+                  <address>[06733] 서울시 서초구 서운로 1길 12 강남빌딩 강남제비스코(주)</address>
+                  <div class="Tel">
+                     <span>전국 대표번호 	&#58; <a href="tel:1588-7233">1588-7233 &#124;</a> </span>
+                     <span>소비자 상담실 	&#58; <a href="tel:080-727-7777">080-727-7777</a></span>
+                  </div>
+                  <p class="copyright">Copyright&copy; KANGNAM JEVISCO CO. LTD.</p>
+               </div>
+            </div>
+
+            <div class="footerRight">
+               <div class="familyWrap">
+                  <button>FAMILY SITES<i class="ri-arrow-drop-down-fill"></i></button>
+                  <ul>
+                     <li><a href="#" targer="_blank">강남화성</a></li>
+                     <li><a href="#" targer="_blank">(주)강남</a></li>
+                     <li><a href="#" targer="_blank">KNK코팅스</a></li>
+                     <li><a href="#" targer="_blank">강남KPI</a></li>
+                     <li><a href="#" targer="_blank">문화연필</a></li>
+                     <li><a href="#" targer="_blank">강남건영</a></li>
+                     <li><a href="#" targer="_blank">강남아이텍</a></li>
+                     <li><a href="#" targer="_blank">KS첨단소재</a></li>
+                  </ul>
+               </div>
+
+                  <ul class="sns">
+                     <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                     <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                     <li><a href="#" target="_blank"><i class="ri-youtube-fill"></i></a></li>
+                  </ul>
+            </div>
+
+
+         </div>
+      </div>
+   </footer>
+
+
+
+</body>
+</html>
