@@ -21,7 +21,9 @@
 
 </head>
 <body>
+   <div class="cursor"></div>
    <header>
+
       <div class="inner">
          <div class="headerNav">
             <h1>
@@ -114,9 +116,9 @@
                      </ul>
                   </div>
 
-               <div class="location">
+               <div class="search">
                   <button>
-                     <a href="#"><i class="ri-map-pin-line"></i></a>
+                     <a href="#"><i class="ri-search-line"></i></a>
                   </button>
                </div>
 
@@ -232,22 +234,6 @@
       </div>
    </main>
 
-
-   <!-- <section id="search">
-      <div class="searchWrap">
-         <div class="whatBox">
-            <div class="txtBox">
-               <strong>무엇을 찾으시나요?</strong>
-               <p>빠르게 변화하는 트렌드를 분석 후 고객에게 <span>최상의 솔루션</span>을 제공합니다.</p>
-            </div>
-            <div class="searchbox">
-               <input type="text" placeholder="궁금하신 제품, 컬러, 대점 검색을 하세요" class="field">
-               <i class="ri-search-line"></i>
-               </div>
-         </div>
-      </div>
-   </section> -->
-
    <section id="field">
       <div class="inner">
          <div class="fieldBox">
@@ -285,7 +271,7 @@
                <div class="swiper fieldSwiper">
                   <div class="swiper-wrapper fieldWrapper">
                      <div class="swiper-slide">
-                        <img src="./img/main/건축용/colortrend1.png">
+                       <img src="./img/main/건축용/colortrend1.png">
                      </div>
                      <div class="swiper-slide">
                         <img src="./img/main/건축용/colortrend2.png">
@@ -358,15 +344,14 @@
          </div>
 
          <div class="colorPop">
+            <div class="popText">
+               <p>원하는 <strong>컬러</strong>를  한눈에 확인하고, 다양한  조건을 쉽게 찾아보세요</p>
+               <button class="viewMore2"><a href="#">View More</a></button>
+            </div>
 
-               <div class="popText">
-                  <p>원하는 <strong>컬러</strong>를  한눈에 확인하고, 다양한  조건을 쉽게 찾아보세요</p>
-                  <button class="viewMore2"><a href="#">View More</a></button>
-               </div>
-
-               <div class="popImg">
-                  <img class="outburst" src="./img/cimg/paintpop.png" alt="">
-               </div>
+            <div class="popImg">
+               <img class="outburst" src="./img/cimg/paintpop.png" alt="">
+            </div>
          </div>
       </div>
    </section>
@@ -377,9 +362,9 @@
             <div class="allName2_sub allName2">
                <div class="allNameIn">
                   <h2>Business</h2>
-                  <p>지속가능하고 혁신적인 도료산업의 리더</p>
-                  <span>건축, 가전, 목공, 자동차, 선박 등 전 산업 분야에 걸쳐 앞서가는<br>  기술과 품질 그리고 보다 친환경적인 도료 솔루션을 제공합니다.</span>
-                  <button class="viewMore"><a href="#">JEVISCO 자세히 알아보기 > </a></button>
+                  <p> 지속가능하고 혁신적인 도료산업의 리더</p>
+                  <span> 건축, 가전, 목공, 자동차, 선박 등 전 산업 분야에 걸쳐 앞서가는<br>  기술과 품질 그리고 보다 친환경적인 도료 솔루션을 제공합니다.</span>
+                  <button><a href="#">자세히 알아보기 > </a></button>
                </div>
             </div>
 
@@ -389,7 +374,7 @@
                   <p>The Origin of JEVISCO</p>
                   <img src="./img/main/역사관/history_01_04.jpg" alt="">
                   <span> JEVISCO의 진취적인 기상과 미래를 향해 나아가는 <br>역동적인 기업문화를 상징적으로 표현해 주고 있습니다.</span>
-                  <button class="viewMore"><a href="#">View More</a></button>
+                  <button><a href="#">View More</a></button>
                </div>
                </div>
 
@@ -401,7 +386,7 @@
                   <span> 친환경 경영, 사회적 책임과 지배구조 개선 등 <br>
                      ESG 경영활동을 적극적으로 추진하고 있습니다.
                      </span>
-                     <button class="viewMore"><a href="#">View More</a></button>
+                     <button><a href="#">View More</a></button>
                </div>
             </div>
 
@@ -411,7 +396,7 @@
                   <p>Internal and External</p>
                   <img src="./img/cimg/world1.jpg" alt="제비스코역사">
                   <span> 해외시장 개척에 총력을 집중하여 <br> 각 분야별 글로벌 기업으로 면모를 갖추어 나가고 있습니다.</span>
-                  <button class="viewMore"><a href="#">View More</a></button>
+                  <button><a href="#">View More</a></button>
                </div>
             </div>
          </div>
@@ -423,8 +408,10 @@
                <div class="swiper-slide companySlide"><img src="./img/cimg/esg2.jpg" alt=""></div>
                <div class="swiper-slide companySlide"><img src="./img/cimg/world2.jpg" alt=""></div>
             </div>
+
          </div>
-         <div class="scroll"></div>
+
+
       </div>
    </section>
 
@@ -449,75 +436,106 @@
 
             <div class="newList">
                <ul class="article">
-                  <li><a href="#">
+                  <li>
+                     <a href="#">
                      <span class="listName">2024 제비스코 DAY 캠페인 시행</span>
                      <span class="date">2024-07-07</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">2023 제비스코 DAY 캠페인 시행</span>
                      <span class="date">2023-07-07</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">2022 제비스코 DAY 캠페인 시행</span>
                      <span class="date">2022-07-07</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">2021 제비스코 DAY 캠페인 시행</span>
                      <span class="date">2021-07-07</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">제비스코 X 이마트24 콜라보레이션</span>
                      <span class="date">2021-04-02</span>
-                  </a></li>
+                     </a>
+                  </li>
                </ul>
 
                <ul class="article">
-                  <li><a href="#">
+                  <li>
+                     <a href="#">
                      <span class="listName">환경 수성 드라이비트용 상도 도료 개발</span>
                      <span class="date">2016-04-01</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">DMF Free Type 스킨 수지 개발</span>
                      <span class="date">2015-10-14</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">비스페놀F형(BPF) 에폭시 Type 강관용 분체도료 개발</span>
                      <span class="date">2015-09-22</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">EGI(아연도금강판) 소재에 부착이 우수한 자동차 보수용 퍼티</span>
                      <span class="date">2015-04-23</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">쌍용자동차 전차종의 컬러시편 기증</span>
                      <span class="date">2015-04-03</span>
-                  </a></li>
+                     </a>
+                  </li>
                </ul>
 
                <ul class="article">
-                  <li><a href="#">
+                  <li>
+                     <a href="#">
                      <span class="listName">강남제비스코㈜, 고양시립 아람미술관 전시회 도료 후원</span>
                      <span class="date">2024-07-25</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">강남제비스코㈜, 방수 보수 페인트 '방수크림’ 출시</span>
                      <span class="date">2023-06-17</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">케냐 콘자신도시개발청 관계자, 강남제비스코㈜ 방문</span>
                      <span class="date">2024-06-10</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">강남제비스코㈜, 환경의 날 맞이 사내·외 캠페인 진행</span>
                      <span class="date">2024-06-05</span>
-                  </a></li>
-                  <li><a href="#">
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
                      <span class="listName">강남제비스코㈜, 넷폼알앤디와 건축물 유지보수 기술개발에 관한 MOU 체결</span>
                      <span class="date">2024-04-17</span>
-                  </a></li>
+                     </a>
+                  </li>
                </ul>
             </div>
          </div>
+
       </div>
    </section>
 
@@ -601,14 +619,12 @@
                   </ul>
                </div>
 
-                  <ul class="sns">
-                     <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                     <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
-                     <li><a href="#" target="_blank"><i class="ri-youtube-fill"></i></a></li>
-                  </ul>
+               <ul class="sns">
+                  <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                  <li><a href="#" target="_blank"><i class="ri-instagram-fill"></i></a></li>
+                  <li><a href="#" target="_blank"><i class="ri-youtube-fill"></i></a></li>
+               </ul>
             </div>
-
-
          </div>
       </div>
    </footer>

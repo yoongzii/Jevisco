@@ -17,6 +17,26 @@
    font-weight: 400;
 }
 
+/* 한글 KOPUBWORL돋움*/
+@font-face {
+	font-family: 'Kopubworld';
+	font-weight: 300;
+	font-display: swap;
+	src: url(../fonts/KoPubWorld\ Dotum\ Light.ttf);
+}
+@font-face {
+	font-family: 'Kopubworld';
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/KoPubWorld\ Dotum\ Medium.ttf);
+}
+@font-face {
+	font-family: 'Kopubworld';
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/KoPubWorld\ Dotum\ Bold.ttf);
+}
+
 
 /* 영문 Montserrat */
 @font-face {

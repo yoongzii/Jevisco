@@ -8,7 +8,9 @@
    --gray-color: #ced4da;
    --white-color: #fdfffc;
 }
-body{font-family: 'SUIT','Pretendard', sans-serif;}
+body{
+   overflow-x: hidden;
+   font-family: 'Pretendard','SUIT', sans-serif;}
 
 h2 {
    font-size: 40px; font-weight: 700;
@@ -21,13 +23,21 @@ h2 {
 
 .inner {max-width: 100%; padding: 2% 3%;}
 
-.viewMore a{
+a, button{cursor: none;}
+
+.cursor{
+   background: var(--main-color);
+   width: 12px; height: 12px;
+   position: fixed; left: 10px; top: 10px;
+   z-index: 9999;
+   border-radius: 50%;
+   transform: translate(-50%, -50%) ;
+   pointer-events: none;
    display: flex; align-items: center; justify-content: center;
-   color: var(--black-color);
-   font-size: 20px;
-   border-bottom: 1px solid var(--black-color);
-   margin-top: 5%;
+   color: var(--main-color);
+   font-weight: bold;
 }
+
 
 /* selection allName/ nameSub/ strong/ p 공통 */
 
@@ -48,7 +58,7 @@ button{background: none; border: none;}
 
 a {
    text-decoration: none;
-   cursor: pointer; color: var(--black-color);
+   color: var(--black-color);
 }
 
 
@@ -95,6 +105,7 @@ header h1 a{
    display: flex; align-items: center; justify-content: space-between;
    overflow: hidden; text-align: center;
    box-sizing: border-box;
+
 }
 
 /* nav 라인 */
@@ -114,10 +125,11 @@ header.on:hover .headerNav::before {
 #gnb .listBox>li {
    display: flex; width: 150px;
    align-items: center; justify-content: center;
-   cursor: pointer;
+
+
 }
 
-.listBox li a{ font-weight: 500; font-size: 20px;}
+.listBox li a{font-weight: 500; font-size: 20px;}
 
 .listBox .dep2Wrap{
    display: none;
@@ -144,16 +156,19 @@ header .util button a{
 }
 
 .util .langWrap>button{
-   display: flex; align-items: center; font-size:18px;
-    z-index: 999;
+   display: flex; align-items: center;
+   font-size:18px;
+   z-index: 999;
    transition: all 0.3s;
    position: relative;
-   font-weight: 500; font-size:  20px;
+   font-weight: 500; font-size:18px;
    box-sizing: border-box;
+   color: var(--black-color);
 }
 
 .util .langWrap ul{
    display: flex; flex-direction: column; gap: 14px;
+   align-items: center;
    position: absolute; right: 9%; top: 66px;
    transform: translateX(-9%);
    padding: 10px 20px;
@@ -221,12 +236,13 @@ header .util button a{
 
 /* main - visual */
 .mainVisual .mainVideo{
-position: relative;  overflow: hidden; width:100%; height: 100vh;
+position: relative; overflow: hidden; height: 100vh;
 }
 .mainVideo .swiper-slide {
 display: flex;justify-content: center; align-items: center;
 font-size: 18px; text-align: center;
 background: var(--white-color);height: 100%;
+
 }
 
 .mainVideo .swiper-slide  video {
@@ -291,7 +307,9 @@ height: 100%;
 
 /* field */
 
-#field{height: 100vh; position: relative;}
+#field{
+   height: 100vh; position: relative;
+   font-family: 'Kopubworld','SUIT','Pretendard', sans-serif;}
 .fieldBox .allName{ height: 150px;}
 .fieldBox .allName strong a, i{
    display: inline-block;
@@ -303,26 +321,29 @@ height: 100%;
 .field_content {display: flex; gap: 80px;}
 
 .field_content .buttonLi {
-   display: flex; flex-direction : column; justify-content: center;
+   display: flex; flex-direction : column;
+   justify-content: center;
    gap: 10px; width: 40%;
 }
 
 .fieldBox .buttonLi button{
    width: 200px; height: 60px; text-align: center;
    border: 1px solid var(--black-color); border-radius: 50px;
-   font-family: 'Pretendard', sans-serif; font-size: 20px;
+   font-size: 20px;
 }
 
 .fieldSwiper .fieldWrapper {align-items: center;}
 
 
 .nameSub2,.swiper2 {display: none;}
+
 .fieldSwiper .fieldWrapper .swiper-slide{
    display: flex; align-items: center; height: 500px;
    transform: translateX(10px); padding: 60px 0;
 }
 
 .fieldWrapper .swiper-slide img {
+   cursor: none;
    width: 75%; height: 75%;
    object-fit: cover;
    border-radius: 50px;
@@ -381,14 +402,20 @@ height: 100%;
 
 /* business */
 #business {height: 100vh;}
-#business .inner {position: relative; height: 100%;}
-.companyLeft .allNameIn .viewMore a{border:none}
+
+#business .inner {
+   display: flex; padding: 0;
+   height: 100%;
+
+}
 
 /* business - companLeft */
 .companyLeft {
-   display: flex; align-items: center; justify-content: center;
-   width: calc(100%/2); height: 100vh;
-   position: absolute; left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: calc(100% / 2);
+   height: 100vh;
 }
 
 .companyLeft img {
@@ -397,34 +424,42 @@ height: 100%;
 }
 
 .companyLeft .allNameIn {
-   display: flex; flex-direction: column; gap: 10px;
+   display: flex; gap: 10px;
+   flex-direction: column;
    align-items: flex-start;
+
 }
 
 .companyLeft .allNameIn h2{font-size: 80px;}
+
 .companyLeft .allName2 .allNameIn p{
    font-size: 24px;
    margin: 10px 0;
    color: var(--main-color);
 }
 
-.companyLeft .allName2 .allNameIn span {
+.companyLeft .allNameIn span {
    display: block;
-   font-size: 24px; line-height: 28px;
+   font-size: 24px;
+   line-height: 28px;
 }
 
 .companyLeft .allName2_sub button a{
    display: flex;
-   align-items: center; justify-content: center;
-   color: var(--black-color); font-size: 20px;
-   border-bottom: 1px solid  var(--black-color);
-   margin-top: 10%;
+   align-items: center;
+   justify-content: center;
+   color: var(--black-color);
+   font-size: 20px;
+   border-bottom: 1px solid var(--black-color);
+   padding: 2% 0;
 }
 
 .allName2_sub{display: none; padding: 50px;}
 .allName2_sub .allNameIn2{
-   display: flex; flex-direction: column; gap:10px;
-   align-items: center; text-align: center;
+   display: flex; gap:10px;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
    line-height: 22px;
 }
 
@@ -433,97 +468,93 @@ height: 100%;
 
 /* business - companyRight */
 .companyRight{
-width: calc(100%/2);height: 100vh;
-position: absolute; right: 0;
+   width: calc(100% / 2);
+
 }
+
 
 .companyWrapper .companySlide img{
    width: 100%; height: 100vh;
-   object-fit: cover; cursor: none;
+   object-fit: cover;
 }
 
 .companyWrapper .companySlide:nth-child(2) img{filter: grayscale(100%);}
 
-.scroll {
-   display: none;
-   position: absolute; right: 20%; bottom: 0;
-   width: 80px; height: 80px;
-   background: url('../img/cimg/scroll.png') no-repeat center center;
-   background-size: contain;
-   pointer-events: none;
-   transform: translateX(-20%);
-   z-index: 999;
-   cursor: pointer;
-}
 
 @media screen and (max-width: 1440px) {
 .companyLeft .allName2 .allNameIn p{font-size: 24px;}
 .companyLeft .allName2 .allNameIn span {font-size: 14px;}
 }
+
+@media screen and (max-width: 640px){
+   #business>* {
+      display: flex;flex-direction: column;
+      height: calc(100%/2);
+   }
+    .companyLeft, .companyRight{width: 100%;}
+  /* .companyRight{display: none;} */
+}
+
+
 /* news */
-#news {height: 50vh;}
+#news {height: 50vh; }
 #news .inner{
+   width: 100%;
    height: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
 }
+
 .newsBox {
-   display: flex;
-   gap: 100px;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   width: 100%;
-   max-width: 1400px; /* Limit max width */
+   display: flex; align-items: center;
+   justify-content: space-between;
+   width: 80%;
    margin: auto;
+   padding: 10px 0;
 }
-.newsBox a {color: var(--black-color);}
+.newsBox a{color: var(--black-color);}
 
 .newsBox .newTab, .newTab ul{
-   display: flex;
-   gap: 30px;
+   display: flex; align-items: center;
+   gap: 30px; height: 100%;
    flex-direction: column;
-   justify-content: space-between;
-   font-size: 30px;
+   font-size: 28px;
    white-space: nowrap;
 }
 
-.newTab ul {width: 200px; height: 100%;}
+.newsBox .newTab .viewMore a{
+   border-bottom: 1px solid var(--black-color);
+   font-size: 20px; padding: 2% 0;
+}
+
+.newsBox .newTab ul {width: 200px;}
+
+.newsBox .newTab li:hover {
+   font-size: 30px;
+   font-weight: bold;
+   color: var(--main-color);
+}
 
 .newsBox .newList {
-   display: flex;
-   flex-shrink: 1;
-   flex-grow: 1;
-   /* flex: 1; */
-   flex-direction: column;
-   align-items: center;
-   font-family: 'SUIT','Pretendard', sans-serif;
+   display: flex;  flex-direction: column; align-items: center;
+   flex-shrink: 1; flex-grow: 1;
 }
 
 .newsBox .newList .article {
    display: none;
    flex-direction: column;
-   font-size: 22px;
-   line-height: 30px;
-   width: 100%;
-   max-width: 1000px;
-   font-family: inherit;
+   font-size: 20px;
+   width: 80%;
 }
-.newsBox .newList .article.show {display: flex;}
+.newsBox .newList .article.show {display: flex; box-sizing: border-box;}
 .newsBox .newList li {border-bottom: 1px solid #797979;}
 .newsBox .newList li a {
    display: flex;
-   gap: 50px;
    justify-content: space-between;
    padding: 10px;
 }
 
-.newsBox .newTab li:hover {
-   font-size: 32px;
-   font-weight: bold;
-   color: var(--main-color);
-}
 
 .newsBox .newList li .listName {
    overflow: hidden;
@@ -532,15 +563,10 @@ position: absolute; right: 0;
 }
 
 .newsBox .newList li .date {
-   flex-shrink: 0;
+   flex-shrink: 0; font-size: 18px;
    text-align: end;
 }
 
-.newsBox .newList ul .viewMore a {
-   display: block;
-   width: 100px;
-   height: 30px;
-}
 
 @media screen and (max-width: 1440px) {
    .newsBox .newTab li a {font-size: 28px;}
@@ -562,6 +588,7 @@ position: absolute; right: 0;
    .newsBox {
       flex-direction: column;
       align-items: center;
+
       gap: 20px;
    }
 
@@ -584,7 +611,7 @@ position: absolute; right: 0;
 }
 
 /* customer */
-#customer {height: 100vh;}
+#customer {height: 100vh; font-family: 'Kopubworld','SUIT','Pretendard', sans-serif;}
 
 #customer .customerBox  {
    height: 80%; overflow: hidden;
@@ -627,7 +654,7 @@ position: absolute; right: 0;
 .customerBox .boxtext .textName{
    color: var(--main-color);
    font-size: 30px; font-weight: 700;
-   font-family: 'SUIT','Pretendard', sans-serif;
+
 }
 .customerBox .boxtext .textSub{
    font-size: 24px; padding-bottom: 10px;
@@ -635,7 +662,7 @@ position: absolute; right: 0;
 .customerBox .boxtext a span{
    text-align: justify; line-height: 1.5;
    font-size: 22px;
-   font-family: 'SUIT','Pretendard', sans-serif;
+
 }
 
 .flow_content_wrap{position: absolute; bottom: 0; z-index: 1;}
@@ -644,7 +671,6 @@ position: absolute; right: 0;
    margin-right: 20px ;
    white-space: nowrap;
    font-size: 180px; font-weight: 700;
-   font-family: 'SUIT','Pretendard', sans-serif;
    color: #fff; opacity: 0.2;
    animation: flow 20s infinite linear;
 }
@@ -685,6 +711,7 @@ footer a{color: var(--black-color);}
 .footerLeft{
    display: flex; flex-direction: column;
    gap: 20px; justify-content: space-between;
+   align-items: flex-start;
 }
 
 .footerLeft .topLeft{display: flex; align-items: center; gap: 20px;}
@@ -725,6 +752,8 @@ footer a{color: var(--black-color);}
 .footerMi p{font-size: 12px; padding-top: 20px;}
 
 .footerRight {
+
+   color: var(--gray-color);
    display: flex; flex-direction: column; gap: 10px;
    align-items: center; justify-content: flex-end;
    }
@@ -748,7 +777,7 @@ footer a{color: var(--black-color);}
 .footerMi {font-size: 12px; line-height: 20px;}
 .footerMi p{font-size: 10px; padding-top: 5px;}
 .footerRight .familyWrap {
-   position:absolute; left: 50% ;top: 5px; transform: translate(-50%, -5px);
+   /* position:absolute; left: 50% ;top: 5px; transform: translate(-50%, -5px); */
    border-bottom: 1px solid #797979; margin-bottom: 20px;
 }
 .footerRight .familyWrap ul{padding: 10px 70px}
@@ -760,6 +789,7 @@ footer a{color: var(--black-color);}
 .footerRight .sns li a{font-size: 18px; }
 
 @media screen and (max-width: 1024px) {
+
    .topLeft .infroInk {white-space: nowrap;}
    }
 
@@ -769,4 +799,5 @@ footer a{color: var(--black-color);}
       height: 300px; text-align: center; margin: 5px 0;
       position: relative;
    }
+   .footerBox .footerLeft{align-items: center;}
 }
