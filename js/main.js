@@ -89,7 +89,9 @@ $(function(){
          } else {
             swiper.slideNext();
          }
+
       });
+
    }
 });
 

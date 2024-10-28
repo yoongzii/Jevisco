@@ -711,27 +711,44 @@ background: var(--white-color);height: 100%;
    to {transform: translateX(-100%);}
 }
 
-@media screen and (min-width: 1441px) {
+@media screen and (max-width: 1780px) {
    .customerBox .boxTitle strong{font-size: 100px;}
    .customerBox .boxTitle p{font-size: 24px;}
+   .customerBox .boxtext{width: 400px; height: 400px; overflow: hidden;}
+   .customerBox .boxtext .textName{font-size: 28px; }
+   .customerBox .boxtext .textSub{font-size: 22px; padding-bottom: 20px;}
+   .customerBox .boxtext a span{line-height: 24px; font-size: 22px;}
 }
-@media screen and (max-width: 1440px) {
-   .customerBox .boxTitle strong{font-size: 80px;}
+
+@media screen and (max-width: 1680px) {
+   .customerBox .boxTitle strong{font-size: 90px;}
    .customerBox .boxTitle p{font-size: 22px;}
    .customerBox .boxtext{width: 350px; height: 370px; overflow: hidden;}
-   .customerBox .boxtext .textName{font-size: 28px; }
    .customerBox .boxtext .textSub{font-size: 22px; padding-bottom: 20px;}
    .customerBox .boxtext a span{line-height: 22px; font-size: 18px;}
 }
-@media screen and (max-width: 1024px) {
-   .customerBox .boxtext {width: 300px; height: 320px; overflow: hidden;}
+
+@media screen and (max-width: 1440px) {
+   .customerBox .boxTitle strong{font-size: 80px;}
+   .customerBox .boxTitle p{font-size: 22px;}
+   .customerBox .boxtext{width: 320px; height: 350px; overflow: hidden;}
+
 }
-@media screen and (max-width: 840px) {
-   .customerBox{display: flex; flex-direction: column;}
+
+@media screen and (max-width: 1240px) {
+   .customerBox{display: flex; flex-direction: column; }
    .customerBox .boxTitle{align-items: flex-start; padding: 10px 20px;}
-   .customerBox .boxtext{width: 300px; height: 320px;}
+   .customerBox .boxtext{width: 450px; height: 300px;}
    .customerBox .textBox{top: 55%; transform: translateY(-55%);}
    .customerBox .boxtext {border-radius: 50px;}
+
+
+}
+
+
+@media screen and (max-width: 960px) {
+   .customerBox .boxtext{width: 300px; height: 320px;}
+
 }
 
 @media screen and (max-width: 640px) {
