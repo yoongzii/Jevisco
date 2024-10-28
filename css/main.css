@@ -1,7 +1,7 @@
 @charset "utf-8";
 :root{
    --main-color: #004BA9;
-   --main-backColor:#fbfcfd;
+   --main-backColor:#f8f9fa;
    --hover-color: #5540b8;
    --yellow-color:#fee879;
    --black-color: #3c3744;
@@ -10,10 +10,13 @@
 }
 body{
    overflow-x: hidden;
-   font-family: 'Pretendard','SUIT', sans-serif;}
+   font-family: 'Pretendard','SUIT', sans-serif;
+   background: var(--main-backColor);
+}
 
 h2 {
    font-size: 40px; font-weight: 700;
+   font-family: 'helvetica', 'cere'
 }
 
 .screenOut{
@@ -78,22 +81,17 @@ header.on {
 }
 header.on a>i{color: var(--black-color);}
 header.on li, .dep2Wrap{
-   animation: gnbwidth 2s ease forwards;
+   animation: gnbwidth 0s linear forwards;
 }
 @keyframes gnbwidth{
    from{
       width: 150px;
    }
    to{
-      width: 180px;
+      width: 200px;
    }
 }
-/*  스크롤을 제거함
-header.scroll{
-   background: var(--white-color);;
-   color: var(--black-color);
-   border-bottom: 1px solid var(--main-color);
-} */
+
 
 header h1 a{
    display: block; width: 190px; height: 26px;
@@ -125,19 +123,19 @@ header.on:hover .headerNav::before {
 #gnb .listBox>li {
    display: flex; width: 150px;
    align-items: center; justify-content: center;
-
-
 }
 
 .listBox li a{font-weight: 500; font-size: 20px;}
 
 .listBox .dep2Wrap{
-   display: none;
+   display: none; align-items: center;
    width: 150px; height: 280px; padding: 20px 5px;
    position: absolute; top: 66px;
    font-size: 16px;
    border-left: 1px solid #ccc;
+
 }
+
 .listBox .dep2Wrap .dep2 {
    display: flex; flex-direction: column;
    gap: 15px; margin: auto;
@@ -148,8 +146,8 @@ header.on:hover .headerNav::before {
 header .util{
    display: flex; gap: 5px;
    align-items: center; justify-content: center;
-
 }
+
 header .util button a{
    font-size: 20px;
    box-sizing: border-box;
@@ -184,7 +182,8 @@ header .util button a{
 .util button a i{font-size: 26px;}
 
 .hamburger_open{display: none;}
- .hamburger {
+
+.hamburger {
    display: none;
    background: rgba(0, 0, 0, 0.8);
    position: absolute; top: 0px;left: 0;right: 0;
@@ -198,7 +197,7 @@ header .util button a{
 .burgerMenu .burgerDep2{
    display: flex; flex-direction: column; gap: 50px;
    align-items: center; justify-content: center;
-   position:absolute;left: 50%;bottom: 50%;
+   position:absolute; left: 50%;bottom: 50%;
    transform: translate(-50%, 50%);
 }
 
@@ -228,11 +227,12 @@ header .util button a{
    .util .langWrap a{font-size:14px;}
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1280px) {
    #gnb, .util>div {display: none;}
-  .hamburger_open{display: flex;}
+   .hamburger_open{display: flex; font-size: 20px;}
 
 }
+
 
 /* main - visual */
 .mainVisual .mainVideo{
@@ -273,57 +273,28 @@ background: var(--white-color);height: 100%;
    transform: rotate(-90deg);
 }
 
-/* search 삭제 */
-#search{height: 80vh;}
-
-.searchWrap{
-   width: 100%;  height: 100%;
-   opacity: 0.8;
-   position: relative;
-   overflow: hidden;
-}
-#search .whatBox {
-   display: flex; flex-direction: column; text-align: center;
-   align-items: center; justify-content: center; gap: 20px;
-height: 100%;
-   font-size: 22px;
-}
-
-.whatBox .txtBox{display: flex; gap: 20px; flex-direction: column;}
-.whatBox .txtBox strong{ font-size: 40px; font-weight: bold;}
-.whatBox .txtBox span{font-weight: bold; font-size: 24px;}
-.whatBox .searchbox{
-   display: flex; gap: 10px; align-items: center; text-align: center;
-   border: 1px solid #121212; background: var(--white-color);
-   width: 600px; padding: 15px;
-}
-
-.whatBox .searchbox .field{
-   background: none; border: none;
-   -webkit-text-fill-color: #121212;
-   font-size: 20px; width: 600px;
-}
-
-
 /* field */
 
-#field{
-   height: 100vh; position: relative;
-   font-family: 'Kopubworld','SUIT','Pretendard', sans-serif;}
-.fieldBox .allName{ height: 150px;}
-.fieldBox .allName strong a, i{
-   display: inline-block;
-   color: var(--black-color);
-   font-size: 28px;
-}
-.fieldBox .allName p{font-size: 24px; line-height: 28px;}
+#field{height: 100vh; position: relative;}
+#field .fieldBox .allName{height: 150px;}
 
-.field_content {display: flex; gap: 80px;}
+#field .allName strong{
+   display: inline-block; padding: 0 10px 10px 0;
+   color: var(--black-color);
+   font-size: 28px; font-weight: bold;
+}
+
+.fieldBox .nameSub p{font-size: 22px; line-height: 25px;}
+
+.field_content {
+   display: flex; gap: 20%;
+   align-items: center;
+   }
 
 .field_content .buttonLi {
    display: flex; flex-direction : column;
-   justify-content: center;
-   gap: 10px; width: 40%;
+   justify-content: center; align-items: center;
+   gap: 10px;
 }
 
 .fieldBox .buttonLi button{
@@ -332,34 +303,63 @@ height: 100%;
    font-size: 20px;
 }
 
-.fieldSwiper .fieldWrapper {align-items: center;}
-
+.fieldSwiper .fieldWrapper {display: flex; align-items: center;}
 
 .nameSub2,.swiper2 {display: none;}
 
 .fieldSwiper .fieldWrapper .swiper-slide{
-   display: flex; align-items: center; height: 500px;
-   transform: translateX(10px); padding: 60px 0;
+   display: flex; align-items: center; height: 600px;
+   transform: translateX(10px);
+   padding: 40px 0;
 }
 
 .fieldWrapper .swiper-slide img {
    cursor: none;
    width: 75%; height: 75%;
    object-fit: cover;
-   border-radius: 50px;
+   border-radius: 45px;
    box-shadow: 0 2px 10px 0px #848484;
 }
+
 .fieldSwiper .swiper-slide-active img {width: 100%; height: 100%;}
-.fieldSwiper .swiper-pagination {text-align: start; transform: translateX(20%);}
+.fieldSwiper .swiper-pagination {text-align: start; transform: translateX(22%);}
 .fieldSwiper .swiper-pagination .swiper-pagination-bullet {background: #848484;}
 
-@media screen and (max-width: 1440px) {
-   .fieldBox .allName p{font-size: 18px;}
-   .fieldSwiper .fieldWrapper .swiper-slide{width: 100%; height: 400px;}
+@media screen and (max-width: 1800px) {
+   .fieldBox .nameSub p{font-size: 20px;}
+   .fieldBox .buttonLi button{font-size: 18px; padding: 10px;}
+   .fieldSwiper .fieldWrapper .swiper-slide{width: 500px; height: 450px;}
 }
+
+@media screen and (max-width: 1439px) {
+   .fieldBox .nameSub p{font-size: 18px;}
+}
+@media screen and (max-width: 840px) {
+   .field_content{display: flex; flex-direction: column;}
+   .field_content .buttonLi{flex-direction : row;}
+   .fieldBox .buttonLi button{
+      width: 180px; height: 50px;
+      font-size: 16px;
+   }
+   .fieldSwiper .fieldWrapper {width: 800px;}
+   .fieldSwiper .swiper-pagination {text-align: start; transform: translateX(50%);
+}
+}
+@media screen and (max-width: 640px) {
+   .fieldBox .nameSub p{font-size: 16px; line-height: 25px;}
+   .field_content .buttonLi{gap: 8px;}
+   .fieldBox .buttonLi button{
+      width: 120px; height: 50px;font-size: 14px;}
+   .fieldSwiper .fieldWrapper {width: 950px;}
+   .fieldSwiper .swiper-pagination {text-align: start; transform: translateX(22%);
+   }
+}
+
+
 
 /* color */
 #color{height: 100vh; width: 100%;}
+#color .allName{margin-top: 60px;}
 #color .inner{height: 100%; position: relative; overflow-x: hidden;}
 #color img{
    position: absolute; left: 50%; bottom: 50px;
@@ -369,18 +369,21 @@ height: 100%;
 }
 
 .colorPop .popText{
-   display: flex; flex-direction: column;
+   display: flex; flex-direction: column; gap: 20px;
    justify-content: center; align-items: center;
-   position: absolute; left: 0;right: 0;top: 10%;
+   position: absolute; left: 0 ; right: 0;top: 10%;
    font-size: 40px;
 }
 
-.colorPop .popText strong {font-size: 45px; font-weight: bold; color: var(--main-color);}
+.colorPop .popText strong {
+   font-size: 45px; font-weight: bold;
+   color: var(--main-color);
+}
 
 .colorPop .popText .viewMore2 a{
       display: flex; justify-content: center; align-items: center;
       color: var(--black-color);
-      width: 200px; height: 60px;
+      width: 180px; height: 50px;
       font-size: 20px;
       border: 1px solid var(--black-color);border-radius: 50px;
       margin-top: 10%;
@@ -394,11 +397,40 @@ height: 100%;
    z-index: -10;
 }
 
-
 @media screen and (max-width: 1440px) {
-   #colorPop .popBox p{font-size: 28px;}
-   #colorPop .popBox p strong{font-size: 40px;}
+   .colorPop .popText p{font-size: 38px;}
+   .colorPop .popText p strong{font-size: 42px;}
    }
+@media screen and (max-width: 1024px) {
+   .colorPop .popText p{font-size: 34px;}
+   .colorPop .popText p strong{font-size: 38px;}
+   }
+@media screen and (max-width: 960px) {
+   .colorPop .popText p{font-size: 28px;}
+   .colorPop .popText p strong{font-size: 35px;}
+   .colorPop .popText .viewMore2 a{
+      width: 150px; height: 40px;
+      font-size: 18px;
+   }
+   }
+@media screen and (max-width: 720px) {
+   .colorPop .popText p{font-size: 22px;}
+   .colorPop .popText p strong{font-size: 30px;}
+
+   }
+@media screen and (max-width: 640px) {
+   .colorBox .nameSub p {font-size: 20px;}
+
+   }
+@media screen and (max-width: 540px) {
+
+   .colorBox .nameSub p {font-size: 16px;}
+   .colorPop .popText p{font-size: 18px;}
+   .colorPop .popText p strong{font-size: 25px;}
+   .colorPop .popText .viewMore2 a{width: 150px; font-size: 16px;}
+   }
+
+
 
 /* business */
 #business {height: 100vh;}
@@ -406,7 +438,6 @@ height: 100%;
 #business .inner {
    display: flex; padding: 0;
    height: 100%;
-
 }
 
 /* business - companLeft */
@@ -429,7 +460,6 @@ height: 100%;
    align-items: flex-start;
 
 }
-
 .companyLeft .allNameIn h2{font-size: 80px;}
 
 .companyLeft .allName2 .allNameIn p{
@@ -463,47 +493,39 @@ height: 100%;
    line-height: 22px;
 }
 
-.allNameIn2  h3 {font-size: 30px;}
+.allNameIn2 h3 {font-size: 30px;}
 .allNameIn2 span{line-height: 24px; margin: 10px 0;}
 
 /* business - companyRight */
-.companyRight{
-   width: calc(100% / 2);
-
-}
-
+.companyRight{width: calc(100% / 2);}
 
 .companyWrapper .companySlide img{
    width: 100%; height: 100vh;
    object-fit: cover;
 }
-
 .companyWrapper .companySlide:nth-child(2) img{filter: grayscale(100%);}
-
-
 @media screen and (max-width: 1440px) {
 .companyLeft .allName2 .allNameIn p{font-size: 24px;}
 .companyLeft .allName2 .allNameIn span {font-size: 14px;}
 }
 
 @media screen and (max-width: 640px){
-   #business>* {
-      display: flex;flex-direction: column;
-      height: calc(100%/2);
-   }
-    .companyLeft, .companyRight{width: 100%;}
-  /* .companyRight{display: none;} */
+   #business .inner{flex-direction: column;}
+   .companyLeft{width: calc(100%)}
+   .allNameIn h2{margin-bottom: 20px;}
+   .companyRight{display: none;}
 }
 
 
 /* news */
-#news {height: 50vh; }
+#news {height: 50vh;}
 #news .inner{
    width: 100%;
    height: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+
 }
 
 .newsBox {
@@ -524,7 +546,6 @@ height: 100%;
 }
 
 .newsBox .newTab .viewMore a{
-   border-bottom: 1px solid var(--black-color);
    font-size: 20px; padding: 2% 0;
 }
 
@@ -538,7 +559,9 @@ height: 100%;
 
 .newsBox .newList {
    display: flex;  flex-direction: column; align-items: center;
-   flex-shrink: 1; flex-grow: 1;
+   flex-shrink: 1; flex-grow: 1; width: 100%;
+
+
 }
 
 .newsBox .newList .article {
@@ -567,6 +590,7 @@ height: 100%;
    text-align: end;
 }
 
+.newsBox .newTab .viewMore a{display: block;font-size: 20px;}
 
 @media screen and (max-width: 1440px) {
    .newsBox .newTab li a {font-size: 28px;}
@@ -584,29 +608,33 @@ height: 100%;
    .newList .listName {font-size: 20px;}
    .newList .date {font-size: 18px;}
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 840px) {
    .newsBox {
       flex-direction: column;
       align-items: center;
-
-      gap: 20px;
-   }
-
-   .newsBox .newTab ul {
-      flex-direction: row; gap: 15px;
-      text-align: center;
-      align-items: flex-start;
-      font-size: 22px;
+      gap: 24px;
       position: relative;
    }
-   .newsBox .newTab li:hover{
-      font-size: 24px;
+
+   .newsBox .newTab ul {flex-direction: row;
+      width: 100%; gap: 15px;
+      text-align: center;
+      align-items: center;
+      font-size: 25px;
    }
-   .newsBox .newTab .viewMore{position: absolute; bottom: 0;}
-   .newsBox .newTab li a {font-size: 22px;}
-   .newsBox .newTab li a:hover {font-size: 22px;}
+   .newsBox .newTab li:hover{
+      font-size: 26px;
+   }
+   .newsBox .newTab .viewMore{
+      display: block; color: var(--black-color);
+      position: absolute; bottom: -50px; right: 0;
+      font-size: 18px;
+   }
+
+
    .newList .listName {font-size: 20px;}
    .newList .date {font-size: 18px;}
+   .newsBox .newTab .viewMore a{font-size: 16px;}
 
 }
 
@@ -697,6 +725,36 @@ height: 100%;
 }
 @media screen and (max-width: 1024px) {
    .customerBox .boxtext {width: 300px; height: 320px; overflow: hidden;}
+}
+@media screen and (max-width: 840px) {
+   .customerBox{display: flex; flex-direction: column;}
+   .customerBox .boxTitle{align-items: flex-start; padding: 10px 20px;}
+   .customerBox .boxtext{width: 300px; height: 320px;}
+   .customerBox .textBox{top: 55%; transform: translateY(-55%);}
+   .customerBox .boxtext {border-radius: 50px;}
+}
+
+@media screen and (max-width: 640px) {
+   #customer .customerBox  {margin-left: 0; border-radius: 0 0 0 0}
+   #customer .customerBox .textBox{
+      right: 50%; left: 50%;
+      flex-direction: column; align-items: center;
+   }
+   .textBox .boxtext {
+      width: 300px;height: 100%;
+      border-radius: 30px;
+
+   }
+   .textBox .boxtext a{
+      text-align: center;
+      padding: 20px 5%;
+
+
+   }
+   .textBox .boxtext a .textName{font-size: 24px;}
+   .textBox .boxtext a .textSub{font-size: 20px; padding-bottom: 5px; }
+   .boxtext a span {display: none;}
+   .flow_content p {font-size: 140px;}
 }
 
 /* footer */
@@ -789,7 +847,6 @@ footer a{color: var(--black-color);}
 .footerRight .sns li a{font-size: 18px; }
 
 @media screen and (max-width: 1024px) {
-
    .topLeft .infroInk {white-space: nowrap;}
    }
 
