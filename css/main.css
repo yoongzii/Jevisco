@@ -12,6 +12,7 @@ body{
    overflow-x: hidden;
    font-family: 'Pretendard','SUIT', sans-serif;
    background: var(--main-backColor);
+
 }
 
 h2 {
@@ -347,9 +348,9 @@ background: var(--white-color);height: 100%;
 }
 @media screen and (max-width: 640px) {
    .fieldBox .nameSub p{font-size: 16px; line-height: 25px;}
-   .field_content .buttonLi{gap: 8px;}
+   .field_content .buttonLi{gap: 6px;}
    .fieldBox .buttonLi button{
-      width: 120px; height: 50px;font-size: 14px;}
+      width: 110px; height: 50px;font-size: 14px;}
    .fieldSwiper .fieldWrapper {width: 950px;}
    .fieldSwiper .swiper-pagination {text-align: start; transform: translateX(22%);
    }
@@ -390,12 +391,13 @@ background: var(--white-color);height: 100%;
 }
 
 .colorPop .popImg{
-   position: absolute; left: 50%; top: 80%;
-   transform: translate(-50% -80%);
-   border: 1px solid var(--black-color);
-   transition:  transform 0.5s ease;
+   max-width: 100%;
+   position: absolute; left: 0; right: 0; bottom: 35%; top: 0;
+   transform: translateY(-35%);
+   transition: transform 0.5s ease;
    z-index: -10;
 }
+.colorPop .popImg img{width: 100%;}
 
 @media screen and (max-width: 1440px) {
    .colorPop .popText p{font-size: 38px;}
@@ -412,7 +414,7 @@ background: var(--white-color);height: 100%;
       width: 150px; height: 40px;
       font-size: 18px;
    }
-   }
+}
 @media screen and (max-width: 720px) {
    .colorPop .popText p{font-size: 22px;}
    .colorPop .popText p strong{font-size: 30px;}
@@ -420,15 +422,13 @@ background: var(--white-color);height: 100%;
    }
 @media screen and (max-width: 640px) {
    .colorBox .nameSub p {font-size: 20px;}
-
    }
 @media screen and (max-width: 540px) {
-
    .colorBox .nameSub p {font-size: 16px;}
    .colorPop .popText p{font-size: 18px;}
    .colorPop .popText p strong{font-size: 25px;}
    .colorPop .popText .viewMore2 a{width: 150px; font-size: 16px;}
-   }
+}
 
 
 
@@ -504,76 +504,110 @@ background: var(--white-color);height: 100%;
    object-fit: cover;
 }
 .companyWrapper .companySlide:nth-child(2) img{filter: grayscale(100%);}
+
+.verSwiper{display: none}
+
 @media screen and (max-width: 1440px) {
 .companyLeft .allName2 .allNameIn p{font-size: 24px;}
 .companyLeft .allName2 .allNameIn span {font-size: 14px;}
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 960px){
    #business .inner{flex-direction: column;}
    .companyLeft{width: calc(100%)}
    .allNameIn h2{margin-bottom: 20px;}
-   .companyRight{display: none;}
+
+   .companyLeft, .companyRight{ display: none;}
+   .verSwiper{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+   }
+   .verSwiper .verSlide{
+      display: flex; align-items: center;
+      justify-content: center;
+   }
+   .verSwiper .verSlide .rowtext{
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 20px; text-align: center;
+   }
+   .verSwiper .verSlide .rowtext h2{font-size: 40px;}
+   .verSwiper .verSlide .rowtext p{font-size: 22px;}
+   .verSwiper .verSlide .rowtext span{font-size: 18px; line-height: 22px;}
+   .verSwiper .verSlide .rowtext button a{font-size: 15px; padding: 10px 0;}
+   .verSwiper .verSlide .rowtext button a:hover{
+      font-size: 16px;
+      color: var(--main-color); font-weight: bold;}
+   .verSwiper .verSlide img{
+      display: block;
+      width: 500px;
+      height: 500px;
+      object-fit: cover;}
 }
+@media screen and (max-width: 640px){
+   .verSwiper .verSlide img{
+      display: block;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+   }
+}
+
 
 
 /* news */
 #news {height: 50vh;}
 #news .inner{
-   width: 100%;
-   height: 100%;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
-
 }
 
 .newsBox {
-   display: flex; align-items: center;
+   display: flex;
+   align-items: center;
    justify-content: space-between;
-   width: 80%;
-   margin: auto;
-   padding: 10px 0;
+   gap: 200px;
 }
 .newsBox a{color: var(--black-color);}
 
 .newsBox .newTab, .newTab ul{
    display: flex; align-items: center;
-   gap: 30px; height: 100%;
+   gap: 15px;
    flex-direction: column;
-   font-size: 28px;
    white-space: nowrap;
 }
 
-.newsBox .newTab .viewMore a{
-   font-size: 20px; padding: 2% 0;
-}
-
 .newsBox .newTab ul {width: 200px;}
-
-.newsBox .newTab li:hover {
+.newsBox .newTab li button{
+   display: block; font-size: 26px;
+   color: var(--black-color)
+}
+.newsBox .newTab li button:hover {
    font-size: 30px;
    font-weight: bold;
    color: var(--main-color);
 }
-
+.newsBox .newTab .viewMore{
+   padding-top: 10px;
+}
 .newsBox .newList {
    display: flex;  flex-direction: column; align-items: center;
-   flex-shrink: 1; flex-grow: 1; width: 100%;
-
-
+   width: 100%;
 }
 
+
 .newsBox .newList .article {
+   width: 100%;
    display: none;
    flex-direction: column;
    font-size: 20px;
-   width: 80%;
 }
 .newsBox .newList .article.show {display: flex; box-sizing: border-box;}
 .newsBox .newList li {border-bottom: 1px solid #797979;}
 .newsBox .newList li a {
-   display: flex;
+   display: flex; align-items: center;
    justify-content: space-between;
    padding: 10px;
 }
@@ -590,7 +624,7 @@ background: var(--white-color);height: 100%;
    text-align: end;
 }
 
-.newsBox .newTab .viewMore a{display: block;font-size: 20px;}
+.newsBox .newTab .viewMore a{display: block; font-size: 20px;}
 
 @media screen and (max-width: 1440px) {
    .newsBox .newTab li a {font-size: 28px;}
@@ -616,26 +650,36 @@ background: var(--white-color);height: 100%;
       position: relative;
    }
 
-   .newsBox .newTab ul {flex-direction: row;
+   .newsBox .newTab ul {
+      flex-direction: row;
       width: 100%; gap: 15px;
       text-align: center;
       align-items: center;
-      font-size: 25px;
    }
-   .newsBox .newTab li:hover{
-      font-size: 26px;
+   .newsBox .newTab li button{font-size: 22px;}
+   .newsBox .newTab li button:hover{
+      font-size: 24px;
    }
    .newsBox .newTab .viewMore{
       display: block; color: var(--black-color);
-      position: absolute; bottom: -50px; right: 0;
-      font-size: 18px;
+      position: absolute; bottom: -50px; right: 0; left: 0;
+      font-size: 22px;
    }
-
-
-   .newList .listName {font-size: 20px;}
-   .newList .date {font-size: 18px;}
+   .newList .newList li .listName {font-size: 20px;}
+   .newList .newList li .date {font-size: 18px;}
    .newsBox .newTab .viewMore a{font-size: 16px;}
 
+}
+@media screen and (max-width: 640px) {
+.newsBox .newTab li button{
+   font-size: 20px;
+}
+.newsBox .newTab li button:hover{
+   font-size: 22px;
+}
+
+.newList .newList li .listName{font-size: 18px;}
+.newList .newList li .date {font-size: 12px;}
 }
 
 /* customer */
@@ -741,8 +785,6 @@ background: var(--white-color);height: 100%;
    .customerBox .boxtext{width: 450px; height: 300px;}
    .customerBox .textBox{top: 55%; transform: translateY(-55%);}
    .customerBox .boxtext {border-radius: 50px;}
-
-
 }
 
 
@@ -760,17 +802,14 @@ background: var(--white-color);height: 100%;
    .textBox .boxtext {
       width: 300px;height: 100%;
       border-radius: 30px;
-
    }
    .textBox .boxtext a{
       text-align: center;
       padding: 20px 5%;
-
-
    }
    .textBox .boxtext a .textName{font-size: 24px;}
    .textBox .boxtext a .textSub{font-size: 20px; padding-bottom: 5px; }
-   .boxtext a span {display: none;}
+   .textBox .boxtext a span {display: none;}
    .flow_content p {font-size: 140px;}
 }
 
@@ -806,9 +845,11 @@ footer a{color: var(--black-color);}
    color: var(--black-color); font-size: 20px;
    transition: all 0.3s;
 }
-.familyWrap button.turn i{transform: rotate(180deg);}
+.familyWrap button.turn i{
+   transform: rotate(180deg);
+}
 
-.familyWrap ul {
+.familyWrap ul{
    display: none; overflow: auto;
    position: absolute; left: 50%; bottom: 60px;
    transform: translateX(-50%);
@@ -827,7 +868,6 @@ footer a{color: var(--black-color);}
 .footerMi p{font-size: 12px; padding-top: 20px;}
 
 .footerRight {
-
    color: var(--gray-color);
    display: flex; flex-direction: column; gap: 10px;
    align-items: center; justify-content: flex-end;

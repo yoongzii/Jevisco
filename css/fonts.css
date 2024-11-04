@@ -75,27 +75,15 @@
    font-weight: 700;
 }
 
+
 /* 영문 helvetica */
 @font-face {
-   font-family: 'helvetica';
-   src: url(../font/helvetica/Helvetica\ Light.ttf);
-   font-weight: 300;
-}
-@font-face {
-   font-family: 'helvetica';
-   src: url(../font/helvetica/Helvetica.ttf);
+   font-family:'helvetica';
+   src: url(../fonts/Helvetica.ttf);
    font-weight: 400;
 }
 @font-face {
-   font-family: 'helvetica';
-   src: url(../font/helvetica/Helvetica\ Bold.ttf);
+   font-family:'helvetica';
+   src: url(../fonts/Helvetica-Bold.ttf);
    font-weight: 700;
-}
-
-/* 영문 cera */
-
-@font-face {
-   font-family: 'cera';
-   src: url(../font/Cera-Pro/Demo_Fonts/Fontspring-DEMO-cerapro-medium.otf);
-   font-weight: 400;
 }

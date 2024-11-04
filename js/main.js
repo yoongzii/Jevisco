@@ -24,23 +24,24 @@ $(function(){
          $(this).css('color', '#004BA9');
       });
 
+
       $(window).on('mousemove',function(e){
          const x = e.clientX
          const y = e.clientY
          $('.cursor').css({left: x , top: y})
+      })
 
-         $('#business img').on('mouseover',function(){
-            $('.cursor').css({width: '80px', height: '80px', background: 'rgba(255,255,255,0.6)'}).text("scroll")
-            $(this).on('mouseleave', function(e){
-               $('.cursor').css({width: '12px', height:'12px',color: '#004BA9'}).text("")
-            })
+      $('#business img').on('mouseover',function(){
+         $('.cursor').css({width: '80px', height: '80px', background: 'rgba(255,255,255,0.6)'}).text("scroll")
+         $(this).on('mouseleave', function(e){
+            $('.cursor').css({width: '12px', height:'12px',color: '#004BA9'}).text("")
          })
+      })
 
-         $('a, button, .viewMore2 a').on('mouseover',function(){
-            $('.cursor').css({width: '80px', height:'80px', background: 'rgba(255,255,255,0.6)'}).text("click")
-            $(this).on('mouseleave', function(e){
-               $('.cursor').css({width: '12px', height:'12px',color: '#004BA9'}).text("")
-            })
+      $('a, button, .viewMore2 a').on('mouseover',function(){
+         $('.cursor').css({width: '80px', height:'80px', background: 'rgba(255,255,255,0.6)'}).text("click")
+         $(this).on('mouseleave', function(e){
+            $('.cursor').css({width: '12px', height:'12px',color: '#004BA9'}).text("")
          })
       })
 
@@ -57,6 +58,13 @@ $(function(){
          $('header').removeClass('on')
       })
 
+      //footer
+      $('.familyWrap>button').off('click').click(function() {
+         $(this).toggleClass('turn')
+         $('.familyWrap>ul').slideToggle('slow');
+      })
+
+
 
    // business
 
@@ -72,60 +80,52 @@ $(function(){
          $('.allName2_sub').hide();
          $('.allName2_sub').eq(activeIndex).show();
          },
+         reachEnd: function () {
+            swiper.mousewheel.disable();
+         }
       },
    });
 
+   window.addEventListener('wheel', function (event) {
+      if (event.deltaY < 0) { //올릴때 -100
+        swiper.mousewheel.enable(); //enable() 활성화
+      } else if (event.deltaY > 0) { //내릴때 100
+      }
+      console.log(event);
+
+   });
+
    $('.allName2_sub').hide();
+
    $('.allName2_sub').first().show();
 
-   if ($(window).width() <= 640) {
-      $('.companyLeft').on('mousewheel', function(event) {
-         event.preventDefault();
-         const wheel = event.originalEvent.wheelDelta;
 
-         if (wheel > 0) {
-            swiper.slidePrev();
-
-         } else {
-            swiper.slideNext();
-         }
-
+   if (window.innerWidth <= 960){
+      const swiper = new Swiper(".verSwiper", {
+         direction: "vertical",
+         slidesPerView: 1,
+         spaceBetween: 30,
+         mousewheel: true,
+         pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+         },
       });
-
    }
-});
+
+ });
 
 
 
 })//ready()
 
 
-
-
-
-   //field
-      var swiper = new Swiper(".fieldSwiper", {
-         spaceBetween: 50,
-         grabCursor: true,
-         loop: true,
-         slidesPerView:2,
-         autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-      },
-         pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-         },
-      });
-
-
-
    // color
    gsap.registerPlugin(ScrollTrigger);
+
    const ani2 = gsap.timeline()
    ani2.from('.colorPop .popText', {y: 100, autoAlpha: 0, })
-   .from('.colorPop .popImg', {y: 100, autoAlpha: 0, })
+   .from('.colorPop .popImg', {y: 100, autoAlpha: 0,})
 
    ScrollTrigger.create({
    animation: ani2,
@@ -145,11 +145,10 @@ $(function(){
    })
 
 
-
-
-   // header
+// header
 const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
+
 var swiper = new Swiper(".mainVideo", {
    spaceBetween: 30,
    centeredSlides: true,
@@ -173,10 +172,7 @@ var swiper = new Swiper(".mainVideo", {
 
 const newsTitles = document.querySelectorAll('.newTab li')
 const articleUl = document.querySelectorAll('.newList .article')
-
-
 newsTitles.forEach((newsTitle, index) => {
-
    newsTitle.addEventListener('click', function() {
       articleUl.forEach(article => {
          article.classList.remove('show');
@@ -187,6 +183,21 @@ newsTitles.forEach((newsTitle, index) => {
 })
 
 //fieldSwiper
+var swiper = new Swiper(".fieldSwiper", {
+   spaceBetween: 50,
+   grabCursor: true,
+   loop: true,
+   slidesPerView:2,
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+},
+   pagination: {
+   el: ".swiper-pagination",
+   clickable: true,
+   },
+});
+
 const buttons = document.querySelectorAll('.buttonLi button');
 const swipers = document.querySelectorAll('.fieldSwiper');
 const swipersWrap = document.querySelectorAll('.fieldWrapper');
